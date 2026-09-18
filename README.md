@@ -139,15 +139,13 @@ Các mục tiêu chính:
 ```text
 youtube-data-pipeline/
 │
-├── main.py
-├── requirements.txt
-├── README.md
-├── .env
-├── .env.example
-├── .gitignore
-│
-├── config/
-│   └── artists.csv
+├── data/
+│   ├── artists.csv
+│   └── processed/
+│       ├── videos.csv
+│       ├── videos_transformed.csv
+│       ├── comments.csv
+│       └── comments_transformed.csv
 │
 ├── etl/
 │   ├── __init__.py
@@ -157,13 +155,16 @@ youtube-data-pipeline/
 │   ├── transform.py
 │   └── load_bigquery.py
 │
-├── data/
-│   ├── raw/
-│   └── processed/
+├── logs/
+│   └── pipeline.log
 │
-└── logs/
-    └── pipeline.log
-```
+├── .env
+├── .env.example
+├── .gitignore
+├── main.py
+├── README.md
+├── requirements.txt
+└── test_ST-MTP.ipynb
 
 Trong GitHub, `.env`, dữ liệu thực tế và log không được commit.
 
